@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+input[name="title"] {
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+input[name="emoji"] {
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+input[name="author"] {
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form_radio {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #32a852;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}

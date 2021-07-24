@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Nouvel article</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/backend/editor_style.css') }}">
+    </head>
+    <body>
+        <form action="/backend/new" method="POST">
+            Titre:<br>
+            <input type="text" name="title" placeholder="Renseigner le titre de l'article" required>
+            Emoji: (<a href="https://emoji-css.afeld.me/">Liste des emojis</a>) <br>
+            <input type="text" name="emoji" placeholder="Renseigner un emoji a utiliser pour l'article">
+            Auteur:<br>
+            <input type="text" name="author" placeholder="Renseigner le nom de l'auteur">
+            <div class="form_radio">
+              <input type="radio" id="false" name="priv" value="False" checked>
+              <label for="false">Public</label><br>
+              <input type="radio" id="true" name="priv" value="True" checked>
+              <label for="true">Private</label>
+            </div>
+            {{ mdeditor.load() }}
+            <button type="submit">Créer l'article</button>
+        </form>
+    </body>
+</html>

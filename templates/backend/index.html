@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Backend</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/backend/backend.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="main">
+    <div class="title_main">
+      Gestion des articles
+    </div>
+    <div class="articles_dashboard">
+      <table>
+        <tr>
+          <th>ID de l'article</th>
+          <th>Titre de l'article</th>
+          <th>Accessibilité</th>
+          <th>Éditer l'article</th>
+          <th>Supprimer l'article</th>
+        </tr>
+      {% for article in articles %}
+        <tr>
+          <td>{{ article['id'] }}</td>
+          <td>{{ article['title'] }}</td>
+          <td>
+            {% if article['private'] == 'True' %}
+              Privé
+            {% else %}
+              Public
+            {% endif %}
+          </td>
+          <td><a href="/backend/edit/{{ article['id'] }}">Éditer l'article</a></td>
+          <td><a href="/backend/delete/{{ article['id'] }}">Supprimer l'article</a></td>
+        </tr>
+      {% endfor %}
+      </table>
+    </div>
+    <div class="new_button">
+      <a href="/backend/new">Nouvel article</a>
+    </div>
+  </div>
+</body>
+</html>

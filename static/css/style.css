@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    height: 20vh;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Racing Sans One', sans-serif;
+    background-image: linear-gradient(rgba(38,37,37,0.2),rgba(38,37,37,0.6)), url('../img/background2.jpg');
+    background-size: cover;
+    color: #ffffff;
+}
+
+.logo_text {
+    margin: auto;
+}
+
+.right_float {
+    float: right;
+}
+
+.left_float {
+    float: left;
+}
+
+.topnav {
+  background-color: #262525;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.topnav a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.topnav a:hover {
+  color: #3d3b38;
+  transition: 0.3s;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.insideNav {
+    width: 65%;
+    margin: auto;
+}
+
+.content {
+    width: 65%;
+    margin: auto;
+    padding-top: 5px;
+    font-weight: 400;
+}
+
+.breadcrumb {
+    margin-top: 10px;
+}
+
+.listing_element {
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.listing_element .emoj_text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.listing_element .emoji {
+    font-size: 2em;
+    padding-right: 15px;
+}
+
+.listing_element .title {
+    font-size: 1.2rem;
+}
+
+.listing_element .description {
+    color: #6e6e6e;
+}
+
+.listing_element .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.listing_element .button {
+    float: right;
+    vertical-align: middle;
+    display: table-cell;
+    transition: 0.3s;
+}
+
+.listing_element .button a {
+    display: table;
+    color: white;
+    line-height: 3em;
+    text-decoration: none;
+    background-color: #262525;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 3em;
+    transition: 0.3s;
+}
+
+.listing_element .button a:hover {
+    background-color: #de453a;
+    transition: 0.3s;
+}
+
+.article_title {
+    margin-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+
+.details_article {
+    color: #575757;
+}
+
+.article_content {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: justify;
+}
+
+.article_content img {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    width: 100%;
+    background-color: #262525;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer .text {
+    margin: auto;
+    color: white;
+    padding: 14px 16px;
+}
+
+.footer .text a {
+    color: white;
+    transition: 0.3s;
+}
+
+.footer .text a:hover {
+    color: #dedede;
+    transition: 0.3s;
+}
+
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .insideNav {
+        width: 100%;
+        margin: 0;
+    }
+
+    .content {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .listing_element {
+        flex-direction: column;
+    }
+
+    .listing_element .button {
+        margin-top: 10px;
+    }
+
+    .listing_element .emoji {
+        display: none;
+    }
+
+    .article_main {
+        padding: 5px;
+    }
+}

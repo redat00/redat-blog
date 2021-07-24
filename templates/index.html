@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/f1ed25f8d1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <title>Redat</title>
+    </head>
+    <body>
+        <div class="logo">
+            <div class="logo_text">
+                REDAT
+            </div>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <div class="insideNav">
+                <a class="right_float" href="#"><i class="fas fa-tools"></i></a>
+                <a class="right_float" href="https://github.com/redat00"><i class="fab fa-github"></i></a>
+                <a class="right_float" href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="articles_listing">
+                {% for article in articles if article['private'] == 'False' %}
+                <div class="listing_element">
+                    <div class="emoj_text">
+                        <div class="emoji">
+                            <i class="em {{ article['emoji'] }}" aria-role="presentation" aria-label=""></i>
+                        </div>
+                        <div class="text">
+                            <div class="title">{{ article['title'] }}</div>
+                            <div class="description">{{ article['author'] }} - {{ article['creation_date'] }}</div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="/article/{{ article['id'] }}">Lire l'article</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="footer">
+            <span class="text"><span class="copyleft">&copy;</span> Redat / Crédits photos : <a href="https://unsplash.com">Unsplash</a></span>
+        </div>
+    </body>
+</html>
